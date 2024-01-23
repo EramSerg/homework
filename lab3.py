@@ -1,14 +1,30 @@
 class Book:
     """ Базовый класс книги. """
     def __init__(self, name: str, author: str):
-        self.name = name
-        self.author = author
+        self.__name = name
+        self.__author = author
 
     def __str__(self):
         return f"Книга {self.name}. Автор {self.author}"
 
     def __repr__(self):
         return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r})"
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, name):
+        self.__name = name
+
+    @property
+    def author(self):
+        return self.__author
+
+    @author.setter
+    def author(self, author):
+        self.__author = author
 
 
 class PaperBook(Book):
