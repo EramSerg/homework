@@ -5,6 +5,15 @@ class Vehicle:
 
     def __init__(self, brand: str, model: str, year_release: str, equipment: str, price: (int, float),
                  factory_price: (int, float)):
+        """
+        Функция инициализации экземпляра базового класса
+        :param brand: марка автомобиля
+        :param model: модель
+        :param year_release: год выпуска 
+        :param equipment: комплектация
+        :param price: цена продажи
+        :param factory_price: цена завода-изготовителя
+        """
         self.brand = brand
         self.model = model
         self.year_release = year_release
